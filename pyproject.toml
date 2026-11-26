@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bayesian-nemo-guardrails"
+version = "0.1.0"
+description = "Deterministic approximate full Bayesian inference for NVIDIA NeMo Guardrails (LLMRails and IORails)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Bayesian NeMo Contributors" }]
+dependencies = ["numpy>=1.24,<3", "scipy>=1.11,<2", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn>=0.27"]
+demo = ["gradio>=6.0,<7.0"]
+nemo = ["nemoguardrails==0.25.0"]
+test = ["pytest>=8", "pytest-asyncio>=0.23", "httpx>=0.27", "fastapi>=0.110"]
+
+[project.scripts]
+bayesian-nemo = "bayesian_nemo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bayesian_nemo = ["*.yaml", "models/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
