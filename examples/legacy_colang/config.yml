@@ -1,0 +1,6 @@
+models: []
+colang_version: "1.0"
+rails:
+  input:
+    flows:
+      - bayesian nemo input

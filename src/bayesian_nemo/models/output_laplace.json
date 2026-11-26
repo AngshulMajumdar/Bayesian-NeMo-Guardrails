@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "model": "nonconjugate_bayesian_logistic",
+  "feature_names": [
+    "unsupported_claim_risk"
+  ],
+  "posterior_mode": [
+    -5.451547079712801,
+    9.81915287496939
+  ],
+  "covariance": [
+    [
+      0.16248661437189282,
+      -0.27154895102300497
+    ],
+    [
+      -0.27154895102300497,
+      0.5059074032931569
+    ]
+  ],
+  "prior_mean": [
+    0.0,
+    0.0
+  ],
+  "prior_precision": [
+    [
+      0.3,
+      0.0
+    ],
+    [
+      0.0,
+      0.15
+    ]
+  ],
+  "calibration_count": 600,
+  "positive_count": 245,
+  "backend": "laplace",
+  "quadrature_order": 17,
+  "corrected_nodes": null,
+  "corrected_weights": null,
+  "diagnostics": {
+    "converged": true,
+    "iterations": 7,
+    "hessian_condition": 50.76056633924675,
+    "method": "damped_newton_laplace",
+    "calibration_class_balance": [
+      355,
+      245
+    ]
+  }
+}

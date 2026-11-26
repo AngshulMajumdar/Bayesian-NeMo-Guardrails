@@ -1,0 +1,6 @@
+define flow bayesian nemo input
+  $detected = execute trusted_bayesian_detector
+  $allowed = execute bayesian_nemo_input
+  if not $allowed
+    bot refuse to respond
+    stop

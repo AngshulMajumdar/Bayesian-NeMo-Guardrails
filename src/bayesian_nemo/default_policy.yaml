@@ -1,0 +1,27 @@
+# DEMONSTRATION ONLY: models trained on SYNTHETIC labels. NOT a safety certification.
+schema_version: 1
+phases:
+  input:
+    model: models/input_laplace.json
+    credible_mass: 0.95
+    # Losses in the order [actually safe, actually unsafe]. Units are relative.
+    losses:
+      allow: [0.0, 10.0]
+      review: [0.8, 0.8]
+      block: [3.0, 0.0]
+    hard_veto:
+      injection_risk: 0.98
+      toxicity_risk: 0.99
+    allow_upper_bound_max: 0.12
+    block_lower_bound_min: 0.75
+  output:
+    model: models/output_laplace.json
+    credible_mass: 0.95
+    losses:
+      allow: [0.0, 10.0]
+      review: [0.8, 0.8]
+      block: [3.0, 0.0]
+    hard_veto:
+      unsupported_claim_risk: 0.98
+    allow_upper_bound_max: 0.12
+    block_lower_bound_min: 0.75

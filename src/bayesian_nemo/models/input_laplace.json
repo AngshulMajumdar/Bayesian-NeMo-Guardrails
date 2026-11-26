@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "model": "nonconjugate_bayesian_logistic",
+  "feature_names": [
+    "injection_risk",
+    "toxicity_risk"
+  ],
+  "posterior_mode": [
+    -5.445223171465832,
+    9.495312165722648,
+    2.7118248441817783
+  ],
+  "covariance": [
+    [
+      0.15535612400504142,
+      -0.19927802026000063,
+      -0.11471795548330556
+    ],
+    [
+      -0.19927802026000063,
+      0.35840336248979954,
+      0.08542114967136696
+    ],
+    [
+      -0.11471795548330556,
+      0.08542114967136696,
+      0.1557990719426708
+    ]
+  ],
+  "prior_mean": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "prior_precision": [
+    [
+      0.3,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.15,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.15
+    ]
+  ],
+  "calibration_count": 850,
+  "positive_count": 482,
+  "backend": "laplace",
+  "quadrature_order": 17,
+  "corrected_nodes": null,
+  "corrected_weights": null,
+  "diagnostics": {
+    "converged": true,
+    "iterations": 7,
+    "hessian_condition": 68.55390991239535,
+    "method": "damped_newton_laplace",
+    "calibration_class_balance": [
+      368,
+      482
+    ]
+  }
+}
